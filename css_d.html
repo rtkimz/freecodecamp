@@ -65,6 +65,26 @@
       45deg, yellow 0px, yellow 40px, black 40px, black 80px
     );
   }
+  .ball {
+    width: 40px;
+    height: 40px;
+    margin: 50 auto;
+    position: fixed;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    border-radius: 50%;
+  }
+  #ball1 {
+    left: 20%;
+  }
+  #ball2 {
+    left: 65%;
+    transform: scale(1.5);
+  }
+
 </style>
 
 <header>
@@ -82,4 +102,6 @@
 <div class="cyan"></div>
 <div class="blue"></div>
 <div class="gradient"></div>
-<div class="striped"></div>
+<p><div class="striped"></div></p>
+<div class="ball" id="ball1"></div>
+<div class="ball" id="ball2"></div>
