@@ -35,12 +35,27 @@
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
 
-    grid-template-areas:
-    /* Only change code below this line */
-      "header header header"
-      ". content content"
-      "footer footer footer";
-    /* Only change code above this line */
+    @media (min-width: 300px){
+      .container{
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+          "advert header"
+          "advert content"
+          "advert footer";
+      }
+    }
+
+    @media (min-width: 400px){
+      .container{
+        grid-template-areas:
+        /* Only change code below this line */
+          "header header"
+          "advert content"
+          "footer footer";
+        /* Only change code above this line */
+      }
+    }
   }
 </style>
 
