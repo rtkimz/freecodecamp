@@ -6,22 +6,29 @@
     <h1 id="title">Survey Form</h1>
     <p id="description">This short description talks about the survey available on this page and why we are asking you to take it.</p>
     <form id="survey-form">
-      <label id="name-label">Name: </label><input id="name" placeholder="Enter your name"/><br />
-      <label id="email-label">Email: </label><input type="email" id="email" placeholder="Enter your email" required /><br />
-      <label id="number-label">Number: </label><input type="number" id="number" placeholder="Enter a number" min="0" max="10" /><br />
-      <label id="website-label">Website: </label><input type="url" name="website" required pattern="https?://.+"><br />
-      <select id="dropdown">
+      <p><label id="name-label">Name: </label><input id="name" placeholder="Enter your name"/></p>
+      <p><label id="email-label">Email: </label><input type="email" id="email" placeholder="Enter your email" required /></p>
+      <p><label id="number-label">Number: </label><input type="number" id="number" placeholder="Enter a number" min="0" max="10" /></p>
+      <p><label id="website-label">Website: </label><input type="url" name="website" required pattern="https?://.+"></p>
+      <p><select id="dropdown">
         <option value="first">first</option>
-        <option value="second">second</option> 
-      </select> <br />
-      <fieldset>
+        <option value="second">second</option>
+      </select></p>
+      <p><fieldset>
         <legend>Select one of the radio buttons</legend>
         <p><input type="radio" name="radSelect" id="rad01" value="01" />radio button One</p>
         <p><input type="radio" name="radSelect" id="rad02" value="02" />radio button Two</p>
         <p><input type="radio" name="radSelect" id="rad03" value="03" />radio button Three</p>
         <p><input type="radio" name="radSelect" id="rad04" value="04" />radio button Four</p>
-      </fieldset>
-      <br />
+      </fieldset></p>
+      <p><fieldset>
+        <legend>Enter your mode of transportation, check ALL that apply</legend>
+        <p><input type="checkbox" value="walk" /> Walk </p>
+        <p><input type="checkbox" value="bike" /> Bike </p>
+        <p><input type="checkbox" value="car" /> Car </p>
+        <p><input type="checkbox" value="plane" /> Plane </p>
+        <p><input type="checkbox" value="boat" /> Boat </p>
+      </fieldset></p>
       <input type="submit" value="Submit">
     </form>
   </body>
