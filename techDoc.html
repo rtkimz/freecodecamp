@@ -4,28 +4,29 @@
     <style>
       @media screen and (min-width: 800px) {
         nav {
-          position: left;
+          position: fixed;
           top: 0px;
           left: 0px;
         }
       }
-      section {
-        position: right;
-        top: 0px;
+      main {
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
       }
     </style>
   </head>
 
   <body>
+    <nav id="navbar">
+      <header>Technical Document</header>
+      <a href="#topic_01" class="nav-link">Topic 01</a><br />
+      <a href="#topic_02" class="nav-link">Topic 02</a><br />
+      <a href="#topic_03" class="nav-link">Topic 03</a><br />
+      <a href="#topic_04" class="nav-link">Topic 04</a><br />
+      <a href="#topic_05" class="nav-link">Topic 05</a><br />
+    </nav>
     <main id="main-doc">
-      <nav id="navbar">
-        <header>Technical Documnet</header>
-        <a href="#topic_01" class="nav-link">Topic 01</a><br />
-        <a href="#topic_02" class="nav-link">Topic 02</a><br />
-        <a href="#topic_03" class="nav-link">Topic 03</a><br />
-        <a href="#topic_04" class="nav-link">Topic 04</a><br />
-        <a href="#topic_05" class="nav-link">Topic 05</a><br />
-      </nav>
       <section class="main-section" id="topic_01">
         <header>Topic 01</header>
         <p>A summary of Topic 01 will go here.</p>
