@@ -83,119 +83,119 @@
       // Only change code below this line
       processed = processArg(7);
 
-    // build a queue
-    function nextInLine(arr, item) {
-    // Only change code below this line
-    arr.push(item);
-    var item = arr.shift();
-    return item;
-    // Only change code above this line
-    }
-    // Setup
-    var testArr = [1, 2, 3, 4, 5];
-    // Display code
-    console.log("Before: " + JSON.stringify(testArr));
-    console.log(nextInLine(testArr, 6));
-    console.log("After: " + JSON.stringify(testArr));
-
-    // understanding boolean values
-    function welcomeToBooleans() {
+      // build a queue
+      function nextInLine(arr, item) {
       // Only change code below this line
-      return true; // Change this line
+      arr.push(item);
+      var item = arr.shift();
+      return item;
       // Only change code above this line
-    }
-
-    // use conditional logic with if statements
-    function trueOrFalse(wasThatTrue) {
-      // Only change code below this line
-      if (wasThatTrue) {
-        return "Yes, that was true";
       }
-      return "No, that was false";
-      // Only change code above this line
-    }
+      // Setup
+      var testArr = [1, 2, 3, 4, 5];
+      // Display code
+      console.log("Before: " + JSON.stringify(testArr));
+      console.log(nextInLine(testArr, 6));
+      console.log("After: " + JSON.stringify(testArr));
 
-    // doing comparisons with the equality operator
-    function testEqual(val) {
-      if (val == 12) { // Change this line
-        return "Equal";
+      // understanding boolean values
+      function welcomeToBooleans() {
+        // Only change code below this line
+        return true; // Change this line
+        // Only change code above this line
       }
-      return "Not Equal";
-    }
-    testEqual(10);
 
-    // comparison using the strict operator
-    function testStrict(val) {
-      if (val === 7) { // Change this line
-        return "Equal";
+      // use conditional logic with if statements
+      function trueOrFalse(wasThatTrue) {
+        // Only change code below this line
+        if (wasThatTrue) {
+          return "Yes, that was true";
+        }
+        return "No, that was false";
+        // Only change code above this line
       }
-      return "Not Equal";
-    }
-    testStrict(10);
 
-    // another example of a comparison using the strict operator
-    function compareEquality(a, b) {
-      if (a === b) { // Change this line
-        return "Equal";
-      }
-      return "Not Equal";
-    }
-    compareEquality(10, "10");
-
-    // using the != operator
-    function testNotEqual(val) {
-      if (val != 99) { // Change this line
+      // doing comparisons with the equality operator
+      function testEqual(val) {
+        if (val == 12) { // Change this line
+          return "Equal";
+        }
         return "Not Equal";
       }
-      return "Equal";
-    }
-    testNotEqual(10);
+      testEqual(10);
 
-    // comparison with the strict inequality operator
-    function testStrictNotEqual(val) {
-      if (val !== 17) { // Change this line
+      // comparison using the strict operator
+      function testStrict(val) {
+        if (val === 7) { // Change this line
+          return "Equal";
+        }
         return "Not Equal";
       }
-      return "Equal";
-    }
+      testStrict(10);
 
-    testStrictNotEqual(10);
-
-    // comparison with the greater than operator
-    function testGreaterThan(val) {
-      if (val > 100) {  // Change this line
-        return "Over 100";
-      }
-      if (val > 10) {  // Change this line
-        return "Over 10";
-      }
-      return "10 or Under";
-    }
-    testGreaterThan(10);
-
-    // comparison with the greater than or equal to operator
-    function testGreaterOrEqual(val) {
-      if (val >= 20) {  // Change this line
-        return "20 or Over";
-      }
-      if (val >= 10) {  // Change this line
-        return "10 or Over";
-      }
-      return "Less than 10";
-    }
-    testGreaterOrEqual(10);
-
-    // comparison with the less than operator
-    function testLessThan(val) {
-        if (val < 25) {  // Change this line
-          return "Under 25";
+      // another example of a comparison using the strict operator
+      function compareEquality(a, b) {
+        if (a === b) { // Change this line
+          return "Equal";
         }
-        if (val < 55) {  // Change this line
-          return "Under 55";
-        }
-        return "55 or Over";
+        return "Not Equal";
       }
-      testLessThan(10);
+      compareEquality(10, "10");
+
+      // using the != operator
+      function testNotEqual(val) {
+        if (val != 99) { // Change this line
+          return "Not Equal";
+        }
+        return "Equal";
+      }
+      testNotEqual(10);
+
+      // comparison with the strict inequality operator
+      function testStrictNotEqual(val) {
+        if (val !== 17) { // Change this line
+          return "Not Equal";
+        }
+        return "Equal";
+      }
+
+      testStrictNotEqual(10);
+
+      // comparison with the greater than operator
+      function testGreaterThan(val) {
+        if (val > 100) {  // Change this line
+          return "Over 100";
+        }
+        if (val > 10) {  // Change this line
+          return "Over 10";
+        }
+        return "10 or Under";
+      }
+      testGreaterThan(10);
+
+      // comparison with the greater than or equal to operator
+      function testGreaterOrEqual(val) {
+        if (val >= 20) {  // Change this line
+          return "20 or Over";
+        }
+        if (val >= 10) {  // Change this line
+          return "10 or Over";
+        }
+        return "Less than 10";
+      }
+      testGreaterOrEqual(10);
+
+      // comparison with the less than operator
+      function testLessThan(val) {
+          if (val < 25) {  // Change this line
+            return "Under 25";
+          }
+          if (val < 55) {  // Change this line
+            return "Under 55";
+          }
+          return "55 or Over";
+        }
+        testLessThan(10);
 
       // comparison with the less than or equal to operator
       function testLessOrEqual(val) {
@@ -290,52 +290,75 @@
         }
         testSize(7);
 
-        // golf code using conditionals
-        var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
-        function golfScore(par, strokes) {
+      // golf code using conditionals
+      var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+      function golfScore(par, strokes) {
+        // Only change code below this line
+        var total = strokes - par;
+        if (strokes == 1) {
+          return names[0];
+        } else if (total <= -2) {
+          return names[1];
+        } else if (total == -1) {
+          return names[2];
+        } else if (par == strokes) {
+          return names[3];
+        } else if (total == 1) {
+          return names[4];
+        } else if (total == 2) {
+          return names[5];
+        } else if (total >= 3) {
+          return names[6];
+        }
+        // Only change code above this line
+      }
+      golfScore(5, 4);
+
+      // using a switch statement
+      function caseInSwitch(val) {
+          var answer = "";
           // Only change code below this line
-          var total = strokes - par;
-          if (strokes == 1) {
-            return names[0];
-          } else if (total <= -2) {
-            return names[1];
-          } else if (total == -1) {
-            return names[2];
-          } else if (par == strokes) {
-            return names[3];
-          } else if (total == 1) {
-            return names[4];
-          } else if (total == 2) {
-            return names[5];
-          } else if (total >= 3) {
-            return names[6];
+          switch (val) {
+            case 1:
+              answer = "alpha";
+              break;
+            case 2:
+              answer = "beta";
+              break;
+            case 3:
+              answer = "gamma";
+              break;
+            case 4:
+              answer = "delta";
+              break;
           }
           // Only change code above this line
+          return answer;
         }
-        golfScore(5, 4);
+        caseInSwitch(1);
 
-        // using a switch statement
-        function caseInSwitch(val) {
-            var answer = "";
-            // Only change code below this line
-            switch (val) {
-              case 1:
-                answer = "alpha";
-                break;
-              case 2:
-                answer = "beta";
-                break;
-              case 3:
-                answer = "gamma";
-                break;
-              case 4:
-                answer = "delta";
-                break;
-            }
-            // Only change code above this line
-            return answer;
+        // switch statement with a default case
+        function switchOfStuff(val) {
+          var answer = "";
+          // Only change code below this line
+          switch (val) {
+            case "a":
+              answer = "apple";
+              break;
+            case "b":
+              answer = "bird";
+              break;
+            case "c":
+              answer = "cat";
+              break;
+            default:
+              answer = "stuff";
+              break;
           }
-          caseInSwitch(1);
+          // Only change code above this line
+          return answer;
+        }
+        switchOfStuff(1);
 
     </script>
   </body>
