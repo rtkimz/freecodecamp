@@ -174,125 +174,125 @@
       var secondTree = myPlants[1].list[1]; // Change this line
 
       // updating a collection of JSON objects (Music Albums)
-        var collection = {
-          2548: {
-            album: "Slippery When Wet",
-            artist: "Bon Jovi",
-            tracks: [
-              "Let It Rock",
-              "You Give Love a Bad Name"
-            ]
-          },
-          2468: {
-            album: "1999",
-            artist: "Prince",
-            tracks: [
-              "1999",
-              "Little Red Corvette"
-            ]
-          },
-          1245: {
-            artist: "Robert Palmer",
-            tracks: []
-          },
-          5439: {
-            album: "ABBA Gold"
-          }
-        };
-        // Only change code below this line
-        function updateRecords(id, prop, value) {
-          if (value === "") {
-            delete collection[id][prop];
-          } else if (prop === "tracks") {
-            if (!collection[id].hasOwnProperty(prop)) {
-              collection[id].tracks = []
-              collection[id].tracks.push(value)
-            } else {
-              collection[id].tracks.push(value)
-            }
+      var collection = {
+        2548: {
+          album: "Slippery When Wet",
+          artist: "Bon Jovi",
+          tracks: [
+            "Let It Rock",
+            "You Give Love a Bad Name"
+          ]
+        },
+        2468: {
+          album: "1999",
+          artist: "Prince",
+          tracks: [
+            "1999",
+            "Little Red Corvette"
+          ]
+        },
+        1245: {
+          artist: "Robert Palmer",
+          tracks: []
+        },
+        5439: {
+          album: "ABBA Gold"
+        }
+      };
+      // Only change code below this line
+      function updateRecords(id, prop, value) {
+        if (value === "") {
+          delete collection[id][prop];
+        } else if (prop === "tracks") {
+          if (!collection[id].hasOwnProperty(prop)) {
+            collection[id].tracks = []
+            collection[id].tracks.push(value)
           } else {
-            collection[id][prop] = value;
+            collection[id].tracks.push(value)
           }
-
-          return collection;
+        } else {
+          collection[id][prop] = value;
         }
-        updateRecords(5439, "artist", "ABBA");
-        updateRecords(2548, "artist", "");
-        updateRecords(1245, "tracks", "Addicted to Love");
-        updateRecords(2468, "tracks", "Free");
-        updateRecords(1245, "album", "Riptide");
 
-        // iterate with while loops in javascript
-        var myArray = [];
+        return collection;
+      }
+      updateRecords(5439, "artist", "ABBA");
+      updateRecords(2548, "artist", "");
+      updateRecords(1245, "tracks", "Addicted to Love");
+      updateRecords(2468, "tracks", "Free");
+      updateRecords(1245, "album", "Riptide");
+
+      // iterate with while loops in javascript
+      var myArray = [];
+      // Only change code below this line
+      var i = 5
+      while (i >= 0) {
+        myArray.push(i);
+        i--;
+      }
+
+      // iterate with a for loop
+      var myArray = [];
+      // Only change code below this line
+      for (var i = 1; i <= 5; i++) {
+        myArray.push(i);
+      }
+
+      // iterate over odd numbers with a for loop
+      var myArray = [];
+      // Only change code below this line
+      for (var i = 1; i <= 9; i += 2) {
+        myArray.push(i);
+      }
+
+      // iterate backwards from 9 to 1, odd numbers only
+      var myArray = [];
+      // Only change code below this line
+      for (var i = 9; i > 0; i -= 2) {
+        myArray.push(i);
+      }
+
+      // iterate through an array with a for loop
+      var myArr = [2, 3, 4, 5, 6];
+      // Only change code below this line
+      var total = 0;
+      for (var i = 0; i < myArr.length; i++) {
+        total += myArr[i];
+      }
+
+      // nesting loops to traverse multi-dimensional arrays
+      function multiplyAll(arr) {
+        var product = 1;
         // Only change code below this line
-        var i = 5
-        while (i >= 0) {
-          myArray.push(i);
-          i--;
+        for (var i = 0; i < arr.length; i++) {
+          for (var j = 0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+          }
         }
+        // Only change code above this line
+        return product;
+      }
+      multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 
-        // iterate with a for loop
-        var myArray = [];
-        // Only change code below this line
-        for (var i = 1; i <= 5; i++) {
-          myArray.push(i);
-        }
+      // iterate with a do...while loop
+      var myArray = [];
+      var i = 10;
+      // Only change code below this line
+      do {
+        myArray.push(i);
+        i++;
+      } while (i < 11);
 
-        // iterate over odd numbers with a for loop
-        var myArray = [];
-        // Only change code below this line
-        for (var i = 1; i <= 9; i += 2) {
-          myArray.push(i);
-        }
-
-        // iterate backwards from 9 to 1, odd numbers only
-        var myArray = [];
-        // Only change code below this line
-        for (var i = 9; i > 0; i -= 2) {
-          myArray.push(i);
-        }
-
-        // iterate through an array with a for loop
-        var myArr = [2, 3, 4, 5, 6];
-        // Only change code below this line
-        var total = 0;
-        for (var i = 0; i < myArr.length; i++) {
-          total += myArr[i];
-        }
-
-        // nesting loops to traverse multi-dimensional arrays
-        function multiplyAll(arr) {
-          var product = 1;
+      // replace loops with recursion
+      function sum(arr, n) {
           // Only change code below this line
-          for (var i = 0; i < arr.length; i++) {
-            for (var j = 0; j < arr[i].length; j++) {
-              product *= arr[i][j];
-            }
+          if (n <= 0) {
+            return 0;
+          } else {
+            return sum(arr, n - 1) + arr[n - 1];
           }
           // Only change code above this line
-          return product;
         }
-        multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
-
-        // iterate with a do...while loop
-        var myArray = [];
-        var i = 10;
-        // Only change code below this line
-        do {
-          myArray.push(i);
-          i++;
-        } while (i < 11);
-
-        // replace loops with recursion
-        function sum(arr, n) {
-            // Only change code below this line
-            if (n <= 0) {
-              return 0;
-            } else {
-              return sum(arr, n - 1) + arr[n - 1];
-            }
-            // Only change code above this line
-          }
 
         // building a profile lookup
         var contacts = [
@@ -321,43 +321,58 @@
             "likes": ["JavaScript", "Gaming", "Foxes"]
           }
         ];
-        function lookUpProfile(name, prop) {
-          // Only change code below this line
-          for (var i = 0; i < contacts.length; i++) {
-            if (name === contacts[i]["firstName"]) {
-              if (contacts[i].hasOwnProperty(prop)) {
-                return contacts[i][`${prop}`];
-              } else {
-                return "No such property";
-              }
+      function lookUpProfile(name, prop)
+      {
+        // Only change code below this line
+        for (var i = 0; i < contacts.length; i++)
+        {
+          if (name === contacts[i]["firstName"])
+          {
+            if (contacts[i].hasOwnProperty(prop))
+            {
+              return contacts[i][`${prop}`];
+            } else
+            {
+              return "No such property";
             }
           }
-          return "No such contact";
-          // Only change code above this line
         }
-        lookUpProfile("Akira", "likes");
-
-        // generate a random number
-        function randomFraction() {
-        // Only change code below this line
-        var num = Math.random();
-        return num;
+        return "No such contact";
         // Only change code above this line
+      }
+      lookUpProfile("Akira", "likes");
+
+      // generate a random number
+      function randomFraction()
+      {
+      // Only change code below this line
+      var num = Math.random();
+      return num;
+      // Only change code above this line
       }
 
       // generating whole numbers with javascript
       var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
-      function randomWholeNum() {
+      function randomWholeNum()
+      {
         // Only change code below this line
         return Math.floor(Math.random() * 10);
       }
 
       // function that finds a random number in a given range
-      function randomRange(myMin, myMax) {
+      function randomRange(myMin, myMax)
+      {
         // Only change code below this line
         return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
         // Only change code above this line
       }
+
+      // using the parseInt() function
+      function convertToInteger(str)
+      {
+        return parseInt(str);
+      }
+      convertToInteger("56");
 
     </script>
   </body>
