@@ -69,6 +69,15 @@
     let result = getNine();
     console.log(result);
 
+    // catch arguments passed in the wrong order when calling a function
+    function raiseToPower(b, e) {
+      return Math.pow(b, e);
+    }
+    let base = 2;
+    let exp = 3;
+    let power = raiseToPower(base, exp); // <-- was wrong (exp, base)
+    console.log(power);
+
     // 
 
   </script>
