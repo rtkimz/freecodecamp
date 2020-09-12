@@ -112,7 +112,13 @@
     let matrix = zeroArray(3, 2);
     console.log(matrix);
 
-    // 
+    // prevent infinite loops with a valid terminal condition
+    function myFunc() {
+      for (let i = 1; i <= 4; i += 2) {
+        // changed the i != 4 to 1 <= 4 to prevent and infinite loop
+        console.log("Still going!");
+      }
+    }
 
   </script>
 </body>
