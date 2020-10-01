@@ -30,14 +30,26 @@
       let result = 1;
       for (let i=1; i<=num; i++)
       {
-        console.log(i);
         result = i * result;
       }
       return result;
     }
     factorialize(5);
 
-    //
+    // find the longest word in a string
+    function findLongestWordLength(str) {
+      let longest = 0;
+      let words = str.split(' ');
+      while (words.length > 0) 
+      {
+        words[0].length > longest ? longest = words[0].length : longest = longest; 
+      words.shift();
+      }
+      return longest;
+    }
+    findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+    // 
 
   </script>
 </body>
