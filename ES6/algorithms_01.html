@@ -74,6 +74,25 @@
     }
     confirmEnding("Bastian", "n");
 
+    // repeat a string
+    function repeatStringNumTimes(str, num) {
+      if (num <= 0) 
+      {
+        return '';
+      } else
+      {
+        let answer = '';
+        while (num > 0) 
+        {
+          answer += str;
+          num--;
+        }
+        return answer;
+      }
+    }
+
+    repeatStringNumTimes("abc", 3);
+
     // 
 
   </script>
