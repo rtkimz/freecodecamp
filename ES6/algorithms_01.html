@@ -139,6 +139,19 @@
     }
     titleCase("I'm a little tea pot");
 
+    // manipulate arrays with splice() and slice()
+    function frankenSplice(arr1, arr2, n) 
+    {
+      let result = arr2.slice();
+      for (let i=0; i<arr1.length; i++)
+      {
+        result.splice(n, 0, arr1[i]);
+        n++;
+      }
+      return result;
+    }
+    frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
     // 
 
   </script>
