@@ -85,7 +85,13 @@
       }
     }
 
-    // 
+    // use protoype properties to reduce duplicate code
+    function Dog(name) {
+      this.name = name;
+    }
+    Dog.prototype.numLegs = 4;  // all Dogs now have 4 legs
+    // Only change code above this line
+    let beagle = new Dog("Snoopy");
 
   </script>
 </body>
